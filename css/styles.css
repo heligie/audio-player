@@ -1,0 +1,17 @@
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+  font-family: "Belanosima";
+
+  font-display: swap;
+  src: url("../assets/fonts/belanosima.woff2") format("woff2"),
+  url("../assets/fonts/belanosima.woff") format("woff");
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+
+  -webkit-tap-highlight-color: transparent;
+}
