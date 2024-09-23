@@ -8,6 +8,151 @@
     <link rel="icon" href="favicon.ico">
   </head>
   <body>
+    <audio src="./assets/audio/tavares.mp3" id="song"></audio>
+    <main>
+      <div class="player__container">
+        <!-- add classes for player "sound-off", "list-open", "stop"  -->
+        <div class="player">
+          <div class="player__top background">
+            <div class="player__cover">
+              <img class="player__image" width="200" height="200" src="/" alt="Album cover.">
+            </div>
+            <div class="player__description">
+              <div class="player__song">
+                <span class="player__title"></span>
+                <span class="player__musician"></span>
+              </div>
+              <div class="player__buttons">
+                <button class="player__button player__button--sound" type="button" aria-label="Sound on/off.">
+                  <svg class="on-icon" width="23" height="23" aria-hidden="true" focusable="false">
+                    <use href="./assets/svg/sprite.svg#on-icon"></use>
+                  </svg>
+                  <svg class="off-icon" width="23" height="23" aria-hidden="true" focusable="false">
+                    <use href="./assets/svg/sprite.svg#off-icon"></use>
+                  </svg>
+                </button>
+                <button class="player__button player__button--list" type="button" aria-label="Open the list of songs.">
+                  <svg class="open-icon" width="24" height="24" aria-hidden="true" focusable="false">
+                    <use href="./assets/svg/sprite.svg#open-icon"></use>
+                  </svg>
+                  <svg class="close-icon" width="24" height="24" aria-hidden="true" focusable="false">
+                    <use href="./assets/svg/sprite.svg#close-icon"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="player__bottom background">
+            <div class="player__progress-bar">
+              <div class="player__input-container">
+                <input class="player__input" type="range" min="0" max="0" value="0">
+                <div class="player__range">
+                  <span class="player__range-toggle"></span>
+                </div>
+              </div>
+              <div class="player__time">
+                <span class="current-time">0:00</span>
+                <span class="duration-time">0:00</span>
+              </div>
+            </div>
+            <div class="player__controls controls">
+              <!-- add class "active" for button-repeat or button-shuffle -->
+              <button class="button button--repeat" type="button" aria-label="Repeat of one song.">
+                <svg width="24" height="20" viewBox="0 0 27 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g filter="url(#filter0_di_4_119)">
+                    <path d="M4.66774 16.9347H5.39842V13.0869H4.80059C4.73417 13.3478 4.53489 13.5434 4.33562 13.6739C4.13634 13.8695 3.93707 14 3.73779 14V14.6521C4.06992 14.5217 4.40204 14.326 4.66774 14.0652V16.9347Z" fill="currentColor"/>
+                    <path d="M4.86732 19.7392C6.9265 19.7392 8.65355 18.4348 9.25138 16.6087H17.156C19.0159 16.6087 20.7429 15.8913 22.0714 14.587C23.3999 13.2826 24.1306 11.5218 24.1306 9.63048C24.1306 8.84787 23.9978 8.13048 23.7985 7.41309L20.3444 9.43482C20.3444 9.50004 20.3444 9.56526 20.3444 9.69569C20.3444 11.4566 18.9494 12.8913 17.2224 12.8913H9.0521C8.255 11.3913 6.72722 10.4131 4.93374 10.4131C2.34317 10.4131 0.283987 12.5 0.283987 15.1087C0.217562 17.6522 2.34317 19.7392 4.86732 19.7392ZM4.86732 11.8479C6.59437 11.8479 7.9893 13.2826 7.9893 14.9783C7.9893 16.7392 6.59437 18.1087 4.86732 18.1087C3.14027 18.1087 1.74534 16.674 1.74534 14.9783C1.74534 13.2826 3.14027 11.8479 4.86732 11.8479Z" fill="currentColor"/>
+                    <path d="M1.14724 11.1957C1.61221 10.674 2.21004 10.2826 2.87429 10.0218C3.27284 9.89134 3.67139 9.76091 4.06994 9.69569V9.63047C4.06994 7.8696 5.46487 6.43482 7.19192 6.43482H14.8308V8.91308L22.4033 4.54352L14.8308 0.17395V2.65221H7.1255C5.26559 2.65221 3.53854 3.3696 2.27646 4.73917C0.947962 6.04352 0.217285 7.80439 0.217285 9.63047C0.217285 10.4131 0.350135 11.1305 0.549411 11.8479C0.748686 11.6522 0.947962 11.3913 1.14724 11.1957Z" fill="currentColor"/>
+                  </g>
+                  <defs>
+                    <filter id="filter0_di_4_119" x="0.217285" y="0.17395" width="26.0872" height="21.7391" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                      <feOffset dx="1.08696" dy="1.08696"/>
+                      <feGaussianBlur stdDeviation="0.543478"/>
+                      <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0"/>
+                      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_4_119"/>
+                      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_4_119" result="shape"/>
+                      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                      <feOffset dx="1.08696" dy="1.08696"/>
+                      <feGaussianBlur stdDeviation="0.543478"/>
+                      <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+                      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
+                      <feBlend mode="normal" in2="shape" result="effect2_innerShadow_4_119"/>
+                    </filter>
+                  </defs>
+                </svg>
+              </button>
+              <button class="controls__button control" type="button" aria-label="Preview song.">
+                <span class="custom-mark custom-mark--left"></span>
+              </button>
+              <button class="controls__button control control--main" type="button" aria-label="Play/stop.">
+                <span class="custom-mark custom-mark--play"></span>
+              </button>
+              <button class="controls__button control" type="button" aria-label="Next song.">
+                <span class="custom-mark custom-mark--right"></span>
+              </button>
+              <button class="button button--shuffle" type="button" aria-label="Shuffle and play.">
+                <svg width="24" height="20" viewBox="0 0 27 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g filter="url(#filter0_di_4_114)">
+                    <path d="M11.4336 15.9659C11.0116 15.4069 10.7302 14.778 10.5192 14.0793L9.81591 12.0529L9.67524 12.542C9.46425 13.3106 9.11259 13.3805 8.97192 13.4504H0.391357V16.9442H8.97192C9.60491 16.9442 10.5896 16.7345 11.4336 15.9659Z" fill="currentColor"/>
+                    <path d="M9.60491 7.37105L10.7302 10.5853L11.8556 13.6599C12.6995 16.2453 14.7392 16.944 15.8645 16.944H19.8031V19.7391L24.3044 15.267L19.8031 10.795V13.4502H15.9348C15.7942 13.4502 15.4425 13.3105 15.2315 12.5419L14.1062 9.32757L12.9809 6.25303C12.1369 3.66763 10.0972 2.96887 8.97192 2.96887H0.391357V6.46266H8.90159C9.04225 6.53254 9.39392 6.67229 9.60491 7.37105Z" fill="currentColor"/>
+                    <path d="M15.0205 7.86029L15.2315 7.30128C15.4425 6.53265 15.7942 6.46277 15.9348 6.39289H19.8031V9.11805L24.3044 4.646L19.8031 0.17395V2.89911H15.8645C15.2315 2.89911 14.1765 3.17861 13.3325 3.87737C13.7545 4.43637 14.1062 5.13513 14.3172 5.83389L15.0205 7.86029Z" fill="currentColor"/>
+                  </g>
+                  <defs>
+                    <filter id="filter0_di_4_114" x="0.391357" y="0.17395" width="26.087" height="21.739" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                      <feOffset dx="1.08696" dy="1.08696"/>
+                      <feGaussianBlur stdDeviation="0.543478"/>
+                      <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0"/>
+                      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_4_114"/>
+                      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_4_114" result="shape"/>
+                      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                      <feOffset dx="1.08696" dy="1.08696"/>
+                      <feGaussianBlur stdDeviation="0.543478"/>
+                      <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+                      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
+                      <feBlend mode="normal" in2="shape" result="effect2_innerShadow_4_114"/>
+                    </filter>
+                  </defs>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="player__dropdown background">
+            <ul class="player__list"></ul>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer__wrapper">
+        <span class="footer__copyright">© heligie, 2024</span>
+        <a class="footer__github-link" aria-label="GitHub profile." href="https://github.com/heligie" target="_blank" rel="nofollow noopener">
+          <svg width="30" height="30" aria-hidden="true" focusable="false">
+            <use href="./assets/svg/sprite.svg#github-logo"></use>
+          </svg>
+        </a>
+      </div>
+    </footer>
+
+    <template id="track">
+      <li class="player__item">
+        <audio class="player__audio" src="/"></audio>
+        <div class="player__track">
+          <div class="player__preview">
+            <img class="player__preview-cover" width="35" height="35" src="/" alt="Preview cover.">
+          </div>
+          <div class="player__caption">
+            <span class="player__name"></span>
+            <span class="player__album"></span>
+          </div>
+        </div>
+        <span class="player__time"></span>
+      </li>
+    </template>
+
     <script type="module" src="js/index.js"></script>
   </body>
 </html>
