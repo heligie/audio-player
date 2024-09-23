@@ -71,6 +71,48 @@ const tracks = [
     cover: './assets/img/roxette.webp',
     audio: './assets/audio/roxette.mp3',
   },
+  {
+    title: 'We Are The People',
+    musician: 'Empire Of The Sun',
+    cover: './assets/img/empire.webp',
+    audio: './assets/audio/empire.mp3',
+  },
+  {
+    title: 'Iron Sky',
+    musician: 'Paolo Nutini',
+    cover: './assets/img/paolo.webp',
+    audio: './assets/audio/paolo.mp3',
+  },
+  {
+    title: 'Say It',
+    musician: 'Blue October',
+    cover: './assets/img/october.webp',
+    audio: './assets/audio/october.mp3',
+  },
+  {
+    title: 'Breakdown',
+    musician: 'Ryan Adams',
+    cover: './assets/img/adams.webp',
+    audio: './assets/audio/adams.mp3',
+  },
+  {
+    title: 'Oh! Darling',
+    musician: 'The Beatles',
+    cover: './assets/img/beatles.webp',
+    audio: './assets/audio/beatles.mp3',
+  },
+  {
+    title: 'Babe I am Gonna Leave You',
+    musician: 'Led Zeppelin',
+    cover: './assets/img/zeppelin.webp',
+    audio: './assets/audio/zeppelin.mp3',
+  },
+  {
+    title: 'Smells Like Teen Spirit',
+    musician: 'Nirvana',
+    cover: './assets/img/nirvana.webp',
+    audio: './assets/audio/nirvana.mp3',
+  },
 ];
 
 export { tracks };
