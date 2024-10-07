@@ -505,24 +505,32 @@ button {
 
 .footer__wrapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   max-width: 550px;
   margin: 0 auto;
   padding: 0 30px;
+
+  column-gap: 5px;
+}
+
+.footer__icon {
+  width: 15px;
+
+  color: var(--lola);
 }
 
 .footer__copyright {
-  font-size: 20px;
+  font-size: 14px;
   color: var(--lola);
 }
 
 .footer__github-link {
-  color: var(--lola);
+  color: var(--topaz);
 }
 
 .footer__github-link:hover {
-  color: var(--topaz);
+  color: var(--lola);
 
   transition-duration: 1s;
 }
@@ -558,7 +566,7 @@ button {
 
 @media (max-width: 540px) {
   .player__title {
-    font-size: 18px;
+    font-size: 20px;
   }
 
   .player__musician {
