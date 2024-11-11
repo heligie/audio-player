@@ -15,7 +15,7 @@
         <div class="player">
           <div class="player__top background">
             <div class="player__cover">
-              <img class="player__image" width="200" height="200" src="/" alt="Album cover.">
+              <img class="player__image" width="200" height="200" fetchpriority="highest" src="/" alt="Album cover.">
             </div>
             <div class="player__description">
               <div class="player__song">
@@ -45,7 +45,7 @@
           <div class="player__bottom background">
             <div class="player__progress-bar">
               <div class="player__input-container">
-                <input class="player__input" type="range" min="0" max="0" value="0">
+                <input class="player__input" type="range" min="0" max="0" value="0" aria-label="Press to rewind the current song to a specific point.">
                 <div class="player__range">
                   <span class="player__range-toggle"></span>
                 </div>
